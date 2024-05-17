@@ -8,6 +8,9 @@ if (Test-Path $projectsOutput) {
     Remove-Item -Path $projectsOutput -Recurse -Force
 }
 
+# Create .gitignore file
+dotnet new gitignore -o $projectsOutput
+
 # Create solution and projects
 dotnet new sln -n $solutionName -o $projectsOutput
 Set-Location $projectsOutput
