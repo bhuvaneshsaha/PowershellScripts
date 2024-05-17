@@ -1,5 +1,9 @@
+param(
+    [Parameter(Mandatory=$true)]
+    [string]$solutionName
+)
+
 $projectsOutput = "Output"
-$solutionName = "Dotnet.CleanArchitecture"
 $projectPath = "src/$solutionName"
 $testPath = "tests/$solutionName"
 
